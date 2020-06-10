@@ -1,14 +1,16 @@
-package guru.springframework.sfgpetclinic.services;
+package guru.springframework.sfgpetclinic.services.map;
 
 import guru.springframework.sfgpetclinic.model.Owner;
 import guru.springframework.sfgpetclinic.model.Pet;
+import guru.springframework.sfgpetclinic.services.OwnerService;
+import guru.springframework.sfgpetclinic.services.PetService;
 import org.springframework.stereotype.Service;
 
 @Service
-public class OwnerServiceImpl extends AbstractMapService<Owner,Long> implements OwnerService{
+public class OwnerServiceMap extends AbstractMapService<Owner,Long> implements OwnerService {
     private final PetService petService;
 
-    public OwnerServiceImpl(PetService petService) {
+    public OwnerServiceMap(PetService petService) {
         this.petService = petService;
     }
 
